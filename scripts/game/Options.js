@@ -26,7 +26,7 @@ Loader.addSounds([
 			HOW_MANY_PROMPTS = 1;
 		}
 		Game.CLICK_TO_ADVANCE = !Game.CLICK_TO_ADVANCE;
-		text_automatic_toggle.innerHTML = Game.CLICK_TO_ADVANCE ? "on click" : "automatically";
+			text_automatic_toggle.innerHTML = Game.CLICK_TO_ADVANCE ? "با کلیک" : "خودکار";
 
 		// Sound
 		sfx( Game.CLICK_TO_ADVANCE ? "ui_button2" : "ui_button1");
@@ -145,33 +145,28 @@ Loader.addSounds([
 		div.innerHTML = "";
 
 		// What's the dialogue?
-		var dialogue = Game.TEXT_SPEED<80 ? "Speak this fast" : "Speak this slow";
+			var dialogue = Game.TEXT_SPEED<80 ? "با این سرعت حرف بزن" : "با این سرعت آروم حرف بزن";
 
-		// Put in the text
-		var span, chr;
-		for(var i=0; i<dialogue.length; i++){
-			span = document.createElement("span");
-			span.innerHTML = dialogue[i];
-			span.style.opacity = 0;
-			div.appendChild(span);
-		}
+			// For Persian: reveal word-by-word instead of char-by-char
+			var words = dialogue.split(" ");
+			var span;
+			for(var i=0; i<words.length; i++){
+				span = document.createElement("span");
+				span.innerHTML = words[i]+" ";
+				span.style.opacity = 0;
+				div.appendChild(span);
+			}
 
-		// Then REVEAL letters one-by-one
-		var interval = 0;
-		for(var i=0; i<dialogue.length; i++){
-
-			var chr = dialogue[i];
-
-			(function(index, interval){
-				_setTimeout(function(){
-					div.children[index].style.opacity = 1;
-				}, interval);
-			})(i, interval);
-
-			// Bigger interval
-			interval += Game.TEXT_SPEED;
-
-		}
+			// Then REVEAL words one-by-one
+			var interval = 0;
+			for(var i=0; i<words.length; i++){
+				(function(index, interval){
+					_setTimeout(function(){
+						div.children[index].style.opacity = 1;
+					}, interval);
+				})(i, interval);
+				interval += Game.TEXT_SPEED*2;
+			}
 
 	};
 	updateText();

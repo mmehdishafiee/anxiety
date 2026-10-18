@@ -14,7 +14,7 @@ Game.FORCE_CANT_SKIP = false;
 Game.CLICK_TO_ADVANCE = true;
 ```
 
-n3: (game auto-saved)
+n3: (بازی خودش سیو شد)
 
 ```
 Game.clearText();
@@ -188,10 +188,6 @@ sfx("sandwich");
 
 (...99)
 
-`publish("act4", ["hong_transition", "next"]);`
-
-(...99)
-
 ```
 publish("act4-show-chars");
 Game.FORCE_CANT_SKIP = false;
@@ -208,46 +204,46 @@ hong({body:"sigh_2"});
 bb({eyes:"look_down"});
 ```
 
-h: *sigh*
+h: *آه*
 
 ```
 hong({body:"hold", eyes:"normal", mouth:"normal"});
 bb({eyes:"normal"});
 ```
 
-h: So what the ^hell^ was the moral of this story?
+h: پس ^لعنتی^ نکته‌ی این داستان چی بود؟
 
 `hong({body:"one_up", eyes:"annoyed"})`
 
-h: What did we even *learn*? I *was* being stupid, my "friends" *were* using me, and we almost frickin' *died*.
+h: اصلاً چی *یاد* گرفتیم؟ من *داشتم* احمقانه عمل می‌کردم، «رفقام» *داشتن* ازم استفاده می‌کردن، و تقریباً ^لعنتی^ *مُردیم*.
 
 `hong({body:"normal", eyes:"normal"})`
 
 {{if _.INJURED}}
-[Yeah, not to mention the hospital bill.](#act4a_bill)
+[آره، چه برسه به صورت‌حساب بیمارستان.](#act4a_bill)
 {{/if}}
 
 {{if !_.INJURED}}
-[Yeah, not to mention the liver damage.](#act4a_liver)
+[آره، چه برسه به آسیبِ کبد.](#act4a_liver)
 {{/if}}
 
-[Yeah, that *was* the worst-case scenario.](#act4a_worst)
+[آره، اون *واقعاً* بدترین سناریو بود.](#act4a_worst)
 
-[Yeah, I was right.](#act4a_right)
+[آره، من درست می‌گفتم.](#act4a_right)
 
 # act4a_bill
 
 `hong({eyes:"annoyed_l", mouth:"narrow"});`
 
-h: Right. I don't think my insurance plan covers "being a dumb^ass^".
+h: درسته. فکر نکنم بیمه‌ام «احمق بودن» رو پوشش بده.
 
 `hong({eyes:"annoyed", mouth:"normal"});`
 
-b: And yet... we survived!
+b: و با این حال... زنده موندیم!
 
 `hong({eyes:"normal"});`
 
-h: ?
+h: ؟
 
 (#act4b)
 
@@ -255,18 +251,18 @@ h: ?
 
 `bb({eyes:"normal_d"});`
 
-b: We definitely shaved a few years off our life expectancy...
+b: قطعاً چند سالی از امید به زندگیمون کم کردیم...
 
 `bb({eyes:"surprise"});`
 
-b: But at least we still *have* a life expectancy! We survived!
+b: ولی حداقل هنوز *داریم* امید به زندگی! زنده موندیم!
 
 ```
 hong({eyes:"surprise"});
 bb({eyes:"normal"});
 ```
 
-h: ?
+h: ؟
 
 (#act4b)
 
@@ -274,13 +270,13 @@ h: ?
 
 `bb({eyes:"normal_d"});`
 
-b: And yet...
+b: و با این حال...
 
-h: Hm?
+h: هوم؟
 
 `bb({eyes:"surprise"});`
 
-b: We survived!
+b: زنده موندیم!
 
 (#act4b)
 
@@ -288,19 +284,19 @@ b: We survived!
 
 `bb({eyes:"normal_d"});`
 
-b: But... you were right, too.
+b: ولی... تو هم درست می‌گفتی.
 
 `hong({eyes:"surprise"});`
 
-h: Hm?
+h: هوم؟
 
 `bb({eyes:"normal"});`
 
-b: I *was* the wolf who cried wolf. So when *actual* danger came, you – justifiably – didn't believe me.
+b: من *همون* گرگ بودم که به گرگ فریاد زد. پس وقتی خطرِ *واقعی* اومد، تو – به درستی – بهم باور نکردی.
 
 `bb({eyes:"surprise_r"});`
 
-b: And yet, we survived!
+b: و با این حال، زنده موندیم!
 
 (#act4b)
 
@@ -311,16 +307,16 @@ bb({eyes:"normal", mouth:"normal"});
 hong({eyes:"normal", mouth:"normal"});
 ```
 
-b: Despite everything, we're still here.
+b: با وجود همه‌چیز، هنوز اینجاییم.
 
 `hong({eyes:"suspect"});`
 
 {{if _.INJURED}}
-h: You seem pretty calm considering we just had a near-death experience.
+h: انقدر آرومی با اینکه تازه یه تجربه‌ی نزدیک به مرگ داشتیم.
 {{/if}}
 
 {{if !_.INJURED}}
-h: You seem pretty calm considering we just had a *near*-near-death experience.
+h: انقدر آرومی با اینکه تازه یه تجربه‌ی *تقریباً* نزدیک به مرگ داشتیم.
 {{/if}}
 
 ```
@@ -328,21 +324,21 @@ hong({eyes:"normal"});
 bb({eyes:"annoyed_d", mouth:"narrow"});
 ```
 
-b: Well, it makes everything else less scary in comparison. It's also got me thinking.
+b: خب، باعث می‌شه بقیه‌ی چیزا نسبتاً کمتر ترسناک بنظر بیان. همچنین باعث شده فکر کنم.
 
 `bb({eyes:"normal", mouth:"normal"});`
 
-b: If me fighting you sucks, because it doesn't protect you...
+b: اگه جنگیدنِ من با تو بده، چون ازت محافظت نمی‌کنه...
 
-h: But me fighting you *also* sucks, because it just makes you yell louder...
+h: ولی جنگیدنِ من با تو *هم* بده، چون فقط باعث می‌شه بلندتر فریاد بزنی...
 
 `bb({eyes:"normal_r"})`
 
-b: Then maybe...
+b: پس شاید...
 
 `bb({eyes:"normal"})`
 
-h: Maybe we don't have to fight.
+h: شاید لازم نیست بجنگیم.
 
 ```
 Game.FORCE_CANT_SKIP = true;
@@ -381,15 +377,15 @@ music('dontfight',{fade:5, volume:0.6});
 bb({eyes:"annoyed_d"});
 ```
 
-b: I'm not a Big Bad Wolf. But I'm not a guard-wolf either.
+b: من گرگِ بدِ بزرگ نیستم. ولی سگِ نگهبان هم نیستم.
 
 `bb({eyes:"sad_d"})`
 
-b: I'm a battered shelter dog.
+b: من یه سگِ پناهگاهِ زده‌شده‌ام.
 
 `bb({eyes:"sad"})`
 
-b: We've been through rough stuff. Maybe trauma or neglect. That's why I sometimes over-react and go:
+b: ما چیزای سختی رو گذروندیم. شاید تروما یا بی‌مهری. برای همینه که بعضی وقتا بیش‌ازحد واکنش نشون می‌دم و می‌گم:
 
 ```
 sfx("yaps", {volume:0.6});
@@ -400,7 +396,7 @@ Game.FORCE_TEXT_DURATION = 90;
 Game.FORCE_NO_VOICE = true;
 ```
 
-b: YAP YAP YAP YAP YAP
+b: واق واق واق واق واق
 
 (...1884)
 
@@ -410,35 +406,35 @@ Game.FORCE_CANT_SKIP = false;
 bb({body:"normal", mouth:"scream", eyes:"scream_sad"});
 ```
 
-b: But I don't *want* to be a cowardly dog! I want to protect you! I want to be a good dog!
+b: ولی من *نمی‌خوام* یه سگِ ترسناک باشم! می‌خوام ازت محافظت کنم! می‌خوام یه سگِ خوب باشم!
 
 `bb({eyes:"sad", mouth:"normal"});`
 
-b: Human... will you help tame this wolf?
+b: آدم... کمک می‌کنی این گرگ رو رام کنی؟
 
 `hong({eyes:"sad"})`
 
-h: I... I'll try.
+h: من... سعی می‌کنم.
 
 `hong({eyes:"normal_l", body:"chin", mouth:"narrow"})`
 
-h: Okay. Healthy relationship with emotions. Relationships need communication. So, let's communicate.
+h: باشه. رابطه‌ی سالم با احساسات. رابطه‌ها به ارتباط نیاز دارن. پس بیا ارتباط برقرار کنیم.
 
 `hong({eyes:"normal", body:"hands_1", mouth:"normal"})`
 
-h: The next five minutes are going to sound super cheesy, but let's fake it 'til we make it.
+h: پنج دقیقه‌ی بعدی خیلی cheesy به نظر می‌رسه، ولی بیا تا درست بشه تقلبش کنیم.
 
 ```
 hong({body:"hands_2", mouth:"normal"});
 ```
 
-h: Dear inner wolf... how are *you* feeling?
+h: ای گرگِ درون... *تو* چه حسی داری؟
 
-n2: TOTAL FEARS USED:
+n2: مجموع ترس‌های استفاده‌شده:
 
-n2: *HARMED* {{_.attack_harm_total}}, *UNLOVED* {{_.attack_alone_total}}, *BAD PERSON* {{_.attack_bad_total}}
+n2: *آسیب‌دیدن* {{_.attack_harm_total}}، *دوست‌نداشته‌شدن* {{_.attack_alone_total}}، *آدم بد بودن* {{_.attack_bad_total}}
 
-n2: WHAT FEAR DO YOU WANT TO TALK ABOUT FIRST? (YOU CAN DO THE OTHERS LATER)
+n2: اول می‌خوای درباره‌ی کدوم ترس حرف بزنیم؟ (بقیه رو بعداً می‌تونی انجام بدی)
 
 ```
 _.a4_fears_discussed = 0;
@@ -447,11 +443,11 @@ hong({body:"normal"});
 bb({eyes:"normal"});
 ```
 
-[I'm scared we'll be harmed.](#act4_harm)
+[می‌ترسم آسیب ببینیم.](#act4_harm)
 
-[I'm scared we'll be alone.](#act4_alone)
+[می‌ترسم تنها بمونیم.](#act4_alone)
 
-[I'm scared we're bad people.](#act4_bad)
+[می‌ترسم آدمای بدی باشیم.](#act4_bad)
 
 # act4_harm
 
@@ -462,92 +458,92 @@ _.a4_fears_discussed += 1;
 
 `bb({eyes:"normal_d"})`
 
-b: I want to protect your need for physical safety,
+b: می‌خوام از نیازت به امنیتِ فیزیکی محافظت کنم،
 
 `bb({eyes:"sad_d"})`
 
-b: But the *whole world* seems so dangerous. So full of tragedy and evil.
+b: ولی *کل دنیا* انقدر خطرناک به نظر می‌رسه. انقدر پر از تراژدی و شر.
 
 `bb({eyes:"sad"})`
 
 {{if _.a4_fears_discussed==1}}
-b: I dunno, enough of *me* choosing what to say next. What do *you* say, human?
+b: نمی‌دونم، دیگه کافیه *من* انتخاب کنم چی بگم. *تو* چی می‌گی، آدم؟
 {{/if}}
 
 {{if _.a4_fears_discussed==2}}
-b: Again, back to you, human. What do you think?
+b: بازم، برگرد به تو، آدم. فکر می‌کنی چی؟
 {{/if}}
 
 {{if _.a4_fears_discussed==3}}
-b: More thoughts, human?
+b: فکر دیگه‌ای داری، آدم؟
 {{/if}}
 
 `Game.OVERRIDE_CHOICE_SPEAKER = "h"`
 
-[You're right. So let's protect ourselves.](#act4_harm_skills)
+[درست می‌گی. پس بریم از خودمون محافظت کنیم.](#act4_harm_skills)
 
-[Let's expose ourselves to *more* danger.](#act4_harm_exposure)
+[بریم خودمون رو به خطرِ *بیشتری* در معرض بذاریم.](#act4_harm_exposure)
 
-[Thank you.](#act4_thanks) `_.thanks_for = "physical safety";`
+[ممنون.](#act4_thanks) `_.thanks_for = "امنیت فیزیکی";`
 
 # act4_harm_skills
 
 `bb({eyes:"look_down", body:"paw"})`
 
-b: But... how? I have fangs and claws, but I'm just a metaphor.
+b: ولی... چطور؟ من دندون و چنگ دارم، ولی فقط یه استعارم.
 
 ```
 bb({ body:"normal", eyes:"normal" });
 hong({ body:"one_up", eyes:"surprise" });
 ```
 
-h: We could learn self-defense? Join a community that protects each other? Improve our general health & personal boundaries?
+h: می‌تونیم دفاع شخصی یاد بگیریم؟ به یه اجتماعی که همو محافظت می‌کنن ملحق بشیم؟ سلامت کلی و مرزهای شخصی‌مون رو بهتر کنیم؟
 
 ```
 bb({ eyes:"annoyed_r" });
 hong({ body:"normal", eyes:"normal" });
 ```
 
-b: Maybe, but...
+b: شاید، ولی...
 
-[Where do we even start?](#act4_harm_skills_start)
+[از کجا شروع کنیم اصلاً؟](#act4_harm_skills_start)
 
-[What if they still don't work?](#act4_harm_skills_work)
+[اگه بازم جواب ندن چی؟](#act4_harm_skills_work)
 
-[What if we go overboard on "safety"?](#act4_harm_skills_overboard)
+[اگه رو «امنیت» زیاده‌روی کنیم چی؟](#act4_harm_skills_overboard)
 
 # act4_harm_skills_start
 
 `bb({ eyes:"sad_d" })`
 
-b: There's so much to do, so much we need to fix about ourselves. What do we even *begin* with?
+b: انقدر کار هست، انقدر چیز باید درباره‌ی خودمون درست کنیم. اصلاً با *چی* شروع کنیم؟
 
 `hong({ body:"shrug", eyes:"surprise" })`
 
-h: We're beginning right now.
+h: داریم همین الان شروع می‌کنیم.
 
 `bb({ eyes:"normal", mouth:"narrow" })`
 
-b: Eh?
+b: ها؟
 
 ```
 bb({ body:"normal", mouth:"normal" });
 hong({ body:"normal", mouth:"normal", eyes:"normal"});
 ```
 
-h: We're practicing good communication right now. Which will help us detect danger better, with fewer false positives,
+h: داریم همین الان ارتباطِ خوب رو تمرین می‌کنیم. که بهمون کمک می‌کنه خطر رو بهتر تشخیص بدیم، با خطاهای کمتر،
 
 `hong({ eyes:"surprise" });`
 
-h: And *that* will help protect us from harm!
+h: و *اون* بهمون کمک می‌کنه از آسیب محافظت کنیم!
 
 `hong({ eyes:"normal", mouth:"normal" });`
 
-h: Therefore: this *is* self-defense training.
+h: پس: این *همون* تمرین دفاع شخصیه.
 
 `bb({ eyes:"normal_r" })`
 
-b: Huh. I was expecting more of this:
+b: هوم. انتظار بیشتر این رو داشتم:
 
 ```
 Game.FORCE_CANT_SKIP = true;
@@ -567,26 +563,26 @@ sfx("hiya");
 
 `bb({ eyes:"normal" });`
 
-h: True, there's no way to 100% protect ourselves...
+h: درسته، هیچ راهی نیست که ۱۰۰٪ از خودمون محافظت کنیم...
 
 `hong({ body:"one_up" });`
 
-h: But even a 1% improvement is still worth something, right?
+h: ولی حتی ۱٪ بهتر شدن هم ارزشی داره، نه؟
 
 ```
 bb({ eyes:"annoyed" });
 hong({ normal:"one_up" });
 ```
 
-b: You're seeing the glass as not 99% empty, but 1% full?
+b: داری لیوان رو نه ۹۹٪ خالی، بلکه ۱٪ پر می‌بینی؟
 
 `bb({ eyes:"normal" });`
 
-h: Which is still worth something if you're stranded in the desert.
+h: که اگه تو صحرا سرگردون باشی هنوز ارزشی داره.
 
 `bb({ eyes:"closed" });`
 
-b: Well. Bottoms up, then.
+b: خب. پس به سلامتی.
 
 (#act4_something_else)
 
@@ -594,26 +590,26 @@ b: Well. Bottoms up, then.
 
 `bb({ body:"chest", eyes:"annoyed" })`
 
-b: I mean, the whole reason you ignored my warnings was because *I* went overboard with safety! 
+b: یعنی، تنها دلیلی که هشدارهای من رو نادیده گرفتی این بود که *من* رو امنیت زیاده‌روی کردم! 
 
 `bb({ body:"normal", eyes:"normal" })`
 
-h: Naw, you're right. We would want to do safety in moderation. Everything in moderation.
+h: نه، درست می‌گی. می‌خوایم امنیت رو در حد اعتدال انجام بدیم. همه‌چیز در حد اعتدال.
 
 `bb({ eyes:"suspect" })`
 
-b: Sorry, *EVERYTHING* in moderation?
+b: ببخشید، *همه‌چیز* در حد اعتدال؟
 
 `hong({ eyes:"annoyed" })`
 
-h: *A moderate number of things* in moderation.
+h: *تعدادِ متعادلی از چیزا* در حد اعتدال.
 
 ```
 bb({ eyes:"closed" });
 hong({ eyes:"normal" });
 ```
 
-b: Thank you for making your statements recursively self-consistent.
+b: ممنون که جمله‌هات رو بازگشتی سازگار کردی.
 
 (#act4_something_else)
 
@@ -622,45 +618,45 @@ b: Thank you for making your statements recursively self-consistent.
 
 `bb({ mouth:"scream_talk", eyes:"scream", MOUTH_LOCK:true });`
 
-b: *WHAT*
+b: *چی*
 
 ```
 bb({ mouth:"narrow", eyes:"suspect" });
 hong({ body:"one_up" });
 ```
 
-h: I mean, let's say a dog is scared of thunder.
+h: یعنی، بذار بگم یه سگی از رعدوبرق می‌ترسه.
 
 `hong({ body:"hands_1" });`
 
-h: One trick trainers use is to play a recording of thunder at a low volume, then give the dog a treat for staying calm.
+h: یه ترفندی که مربی‌ها استفاده می‌کنن اینه که ضبط‌شده‌ی رعدوبرق رو با صدای کم پخش کنن، بعد به سگ جایزه بدن که آروم بمونه.
 
 `hong({ body:"hands_2" });`
 
-h: Over several days, the trainer raises the volume bit by bit, until the dog has overcome their fear of thunder.
+h: طی چند روز، مربی صدا رو کم‌کم بلندتر می‌کنه، تا سگ ترسش از رعدوبرق رو غلبه کنه.
 
 ```
 hong({ body:"normal", eyes:"surprise" });
 bb({ mouth:"normal", eyes:"normal" });
 ```
 
-h: It's called exposure therapy!
+h: بهش می‌گن درمانِ مواجهه‌ای!
 
 `hong({ body:"point", eyes:"normal" });`
 
-h: Since you're a dog, it should work for you too, right? All mammals have the same fight-or-flight response.
+h: چون تو یه سگی، باید روی تو هم کار کنه، نه؟ همه‌ی پستاندارها همون واکنش جنگ یا گریز رو دارن.
 
 `hong({ body:"normal" });`
 
-[What if we desensitize *too* much?](#act4_harm_exposure_overboard)
+[اگه *زیادی* بی‌حس بشیم چی؟](#act4_harm_exposure_overboard)
 
-[What if we're exposed to *real* danger?](#act4_harm_exposure_hurt)
+[اگه به خطرِ *واقعی* در معرض باشیم چی؟](#act4_harm_exposure_hurt)
 
-[I'm a wolf, not a dog.](#act4_harm_exposure_dog) `bb({ eyes:"suspect" })`
+[من گرگم، نه سگ.](#act4_harm_exposure_dog) `bb({ eyes:"suspect" })`
 
 # act4_harm_exposure_dog
 
-h: And I'll show you kindness and patience 'til you're domesticated into a cute lil' puppy.
+h: و بهت مهربونی و صبر نشون می‌دم تا تبدیل بشی به یه توله‌سگِ کوچولوی خانگی.
 
 `bb({ MOUTH_LOCK:true })`
 
@@ -668,7 +664,7 @@ b: ...
 
 `bb({ eyes:"sad", mouth:"smile" })`
 
-b: D'aw.
+b: آآآو.
 
 (#act4_something_else)
 
@@ -676,35 +672,35 @@ b: D'aw.
 
 `bb({ eyes:"annoyed" })`
 
-b: We *just* saw what happens if you shut down your fear – you put yourself in *actually* dangerous situations.
+b: ما *تازه* دیدیم چی می‌شه اگه ترست رو خاموش کنی – خودت رو تو موقعیت‌های *واقعاً* خطرناک می‌ذاری.
 
 `bb({ eyes:"angry_r", body:"one_up" })`
 
-b: Besides, won't *too* much desensitization turn us into psychopaths?
+b: ضمناً، *زیادی* بی‌حس شدن ما رو به روان‌پریش تبدیل نمی‌کنه؟
 
 `bb({ mouth:"scream", eyes:"scream", body:"two_up" })`
 
-b: Soon we'll give ourselves treats while watching snuff murder porn!
+b: به زودی داریم به خودمون جایزه می‌دیم در حالی که داریم پورنِ قتل تماشا می‌کنیم!
 
 `hong({ eyes:"annoyed" })`
 
-h: I... think there's a line between that and the thunder.
+h: من... فکر کنم یه خطی بین اون و رعدوبرق هست.
 
 `bb({ body:"normal", mouth:"normal", eyes:"suspect" })`
 
-b: But exactly *where*, human? *Where?!*
+b: ولی دقیقاً *کجا*، آدم؟ *کجا؟!*
 
 `hong({ eyes:"surprise", body:"one_up" })`
 
-h: I don't know. But *you* can help me!
+h: نمی‌دونم. ولی *تو* می‌تونی بهم کمک کنی!
 
 `hong({ eyes:"normal", body:"normal" })`
 
-h: Working and negotiating with you, we'll draw that line.
+h: با کار و چانه‌زنی با تو، اون خط رو می‌کشیم.
 
 `bb({ body:"paw", mouth:"narrow", eyes:"closed" })`
 
-b: Okay. But I've got no opposable thumbs, so you have to do the drawing.
+b: باشه. ولی من انگشتِ شست ندارم، پس تو باید رسمش کنی.
 
 (#act4_something_else)
 
@@ -713,11 +709,11 @@ b: Okay. But I've got no opposable thumbs, so you have to do the drawing.
 `bb({ body:"two_up", eyes:"angry_r" })`
 
 {{if _.INJURED}}
-b: For example: we jumped off a freaking *roof!*
+b: مثلاً: ما از یه *پشت‌بامِ* لعنتی پریدیم!
 {{/if}}
 
 {{if !_.INJURED}}
-b: For example: we almost jumped off a freaking *roof!*
+b: مثلاً: ما تقریباً از یه *پشت‌بامِ* لعنتی پریدیم!
 {{/if}}
 
 ```
@@ -725,17 +721,17 @@ hong({ eyes:"annoyed" });
 bb({ body:"normal", eyes:"annoyed" });
 ```
 
-h: Nah you're right. One *can* go too far.
+h: نه درست می‌گی. یه نفر *می‌تونه* زیادی دور بزنه.
 
 `hong({ eyes:"normal" });`
 
-h: But that's why, if we do exposure therapy, we'll start small, and make small steps upward.
+h: ولی برای همینه که اگه درمانِ مواجهه‌ای بکنیم، کوچیک شروع می‌کنیم و قدم‌های کوچیک بالا می‌ریم.
 
-h: Just before we hit *actual* danger, we stop.
+h: درست قبل از اینکه به خطرِ *واقعی* برسیم، می‌ایستیم.
 
 `bb({ eyes:"annoyed_r", mouth:"narrow" });`
 
-b: Yeah I draw the line between hearing loud thunder, and standing in a storm with a tall pointy hat.
+b: آره من خط رو بین شنیدن رعدوبرقِ بلند و ایستادن تو طوفان با یه کلاه بلند تیز می‌کشم.
 
 (#act4_something_else)
 
@@ -763,11 +759,11 @@ b: ...
 
 `bb({ eyes:"annoyed" })`
 
-b: Wait, no arguments for or against what I'm feeling? Just... "thank you"?
+b: صبر کن، هیچ بحثی موافق یا مخالف با چیزی که احساس می‌کنم نیست؟ فقط... «ممنون»؟
 
 `hong({ eyes:"surprise", body:"shrug" })`
 
-h: Yeah! Thank you for showing your concern for my {{_.thanks_for}}.
+h: آره! ممنون که نگرانیت رو برای {{_.thanks_for}} من نشون دادی.
 
 ```
 bb({ eyes:"closed_annoyed", MOUTH_LOCK:true });
@@ -776,67 +772,67 @@ hong({ eyes:"normal", body:"normal" });
 
 b: ...
 
-h: You okay?
+h: خوبی؟
 
 `bb({ eyes:"super_sad", mouth:"narrow" });`
 
-b: You've never said *thank you* to me before.
+b: قبلن هیچ‌وقت بهم *ممنون* نگفتی.
 
 `hong({ mouth:"smile" });`
 
-h: Aw you big fuzzy-wuzzy panic-wolf.
+h: آآآو تو گرگِ هراسِ خزدارِ بزرگ.
 
 (#act4_something_else)
 
 # act4_thanks_2
 
-h: Even if you over-react, I appreciate you looking out for my {{_.thanks_for}}.
+h: حتی اگه زیاده‌روی می‌کنی، قدردانِ اینم که مراقب {{_.thanks_for}} منی.
 
 `bb({ eyes:"annoyed" })`
 
-b: Wait... you're not just repeating "thank you" to avoid actually talking about these fears, are you?
+b: صبر کن... داری فقط «ممنون» تکرار می‌کنی که از حرف زدن درباره‌ی این ترس‌ها فرار کنی، نه؟
 
 ```
 bb({ eyes:"normal" });
 hong({ eyes:"annoyed", body:"chin" });
 ```
 
-h: Well, stuff's complicated, and I don't always have answers ready.
+h: خب، چیزا پیچیده‌ان، و همیشه جواب آماده ندارم.
 
 `hong({ eyes:"annoyed_l", body:"one_up" })`
 
-h: It's not like life gives you a list of 3 pre-made dialogue responses.
+h: این‌طوری نیست که زندگی بهت یه لیست ۳تایی از جواب‌های دیالوگِ آماده بده.
 
 `hong({ eyes:"normal", mouth:"smile", body:"normal" })`
 
-h: But for now, I can at least say thanks.
+h: ولی فعلاً، حداقل می‌تونم تشکر کنم.
 
-b: Well, thank you too, for listening to me patiently.
+b: خب، منم ممنون، که با صبر بهم گوش دادی.
 
 `bb({ eyes:"closed" });`
 
-b: You small hairless flesh-mammal.
+b: تو پستاندارِ گوشتِ بی‌موِ کوچیک.
 
 (#act4_something_else)
 
 # act4_thanks_3
 
-h: Even if your yapping scares me, you're simply trying to protect my {{_.thanks_for}}.
+h: حتی اگه پارس‌هات منو می‌ترسونن، فقط داری تلاش می‌کنی {{_.thanks_for}} من رو محافظت کنی.
 
 `bb({ eyes:"smile_r" });`
 
-b: Okay, if you keep flattering me like this, the internet's gonna get some weird ideas about us.
+b: باشه، اگه این‌جوری بهم بگوشی، اینترنت یه ایده‌های عجیبی درباره‌ی ما می‌گیره.
 
 ```
 bb({ eyes:"smile" });
 hong({ eyes:"annoyed" });
 ```
 
-h: C'mon, I'm just a vulnerable college-age kid and you're a big, scary wolf. What's the worst that cou--
+h: بیا ببینم، من فقط یه بچه‌ی دانشجو-سنِ آسیب‌پذیرم و تو یه گرگِ بزرگ ترسناک. بدترین اتفاقی که می‌تونه بیفته چ--
 
 `hong({ eyes:"normal", body:"point" });`
 
-h: Actually, do not answer that.
+h: در واقع، به اون جواب نده.
 
 (#act4_something_else)
 
@@ -852,33 +848,33 @@ _.a4_fears_discussed += 1;
 
 `bb({ eyes:"sad_d" });`
 
-b: I want to make sure you fulfil that deep, human need to belong...
+b: می‌خوام مطمئن بشم که اون نیازِ عمیقِ انسانی به تعلق رو برآورده می‌کنی...
 
 `bb({ eyes:"sad_u" });`
 
-b: But I worry that if anyone ever knew us – the *real* us – we'd scare them all away.
+b: ولی نگرانم که اگه کسی مارو بشناسه – *واقعی* مارو – همه رو فراری بدیم.
 
 `bb({ eyes:"sad" });`
 
 {{if _.a4_fears_discussed==1}}
-b: I dunno, enough of *me* choosing what to say next. What do *you* say, human?
+b: نمی‌دونم، دیگه کافیه *من* انتخاب کنم چی بگم. *تو* چی می‌گی، آدم؟
 {{/if}}
 
 {{if _.a4_fears_discussed==2}}
-b: Again, back to you, human. What do you think?
+b: بازم، برگرد به تو، آدم. فکر می‌کنی چی؟
 {{/if}}
 
 {{if _.a4_fears_discussed==3}}
-b: More thoughts, human?
+b: فکر دیگه‌ای داری، آدم؟
 {{/if}}
 
 `Game.OVERRIDE_CHOICE_SPEAKER = "h"`
 
-[I agree: let's work on our social life.](#act4_alone_skills)
+[موافقم: بریم روی زندگی اجتماعیمون کار کنیم.](#act4_alone_skills)
 
-[I think people like us. Let's find out?](#act4_alone_experiment)
+[فکر کنم آدم‌ها مارو دوست دارن. بریم بفهمیم؟](#act4_alone_experiment)
 
-[Thank you.](#act4_thanks) `_.thanks_for = "social belonging";`
+[ممنون.](#act4_thanks) `_.thanks_for = "تعلق اجتماعی";`
 
 # act4_alone_skills
 
@@ -887,60 +883,60 @@ bb({ eyes:"normal" });
 hong({ body:"chin" });
 ```
 
-h: We could practice skills like asking questions, listening and empathizing, being open and vulnerable, etc?
+h: می‌تونیم مهارت‌هایی مثل سوال پرسیدن، گوش دادن و همدلی، باز و آسیب‌پذیر بودن و اینا رو تمرین کنیم؟
 
 `hong({ eyes:"normal_l" });`
 
-h: Or make better social habits, like scheduling time with friends or regularly going to meetups?
+h: یا عادت‌های اجتماعیِ بهتری بسازیم، مثل زمان‌بندیِ وقت با رفقا یا رفتن منظم به جمع‌ها؟
 
 `hong({ body:"one_up" });`
 
-h: Could also learn to get more comfortable with rejection.
+h: یا می‌تونیم یاد بگیریم که با رد شدن راحت‌تر باشیم.
 
 `hong({ eyes:"normal" });`
 
-h: Or learn to know when people *aren't* rejecting us, they're just tired or have Resting ^Bitch^ Face.
+h: یا یاد بگیریم بفهمیم که آدم‌ها *ندارن* مارو رد می‌کنن، فقط خستن یا چهره‌ی استراحتِ خشنه دارن.
 
 ```
 hong({ body:"normal" });
 bb({ eyes:"annoyed_r" });
 ```
 
-b: That's a lot of options. But, about "learning social skills"...
+b: خیلی گزینه هست. ولی، درباره‌ی «یادگیری مهارت‌های اجتماعی»...
 
-[Isn't that *manipulative?*](#act4_alone_skills_manipulative)
+[این *دستکاری* نیست؟](#act4_alone_skills_manipulative)
 
-[Won't that make us *easier to manipulate?*](#act4_alone_skills_manipulated)
+[این مارو *راحت‌تر دستکاری‌شونده* نمی‌کنه؟](#act4_alone_skills_manipulated)
 
-[What if we still fail?](#act4_alone_skills_fail)
+[اگه بازم شکست بخوریم چی؟](#act4_alone_skills_fail)
 
 # act4_alone_skills_manipulative
 
 `bb({ eyes:"suspect" });`
 
-b: Aren't serial killers who can read their victims' emotions great at "empathy"?
+b: آخه قاتل‌های سریالی که می‌تونن احساسات قربونیاشون رو بخونن در «همدلی» عالین؟
 
 `bb({ eyes:"annoyed" });`
 
-b: Didn't Charles Manson win friends and influence people?
+b: چارلز منسون رفیق جمع نکرد و رو آدما نفوذ نکرد؟
 
 `hong({ eyes:"annoyed", body:"chin" });`
 
-h: No, you're right.
+h: نه، درست می‌گی.
 
-h: "Social skills" mean nothing if we don't genuinely care *for* people.
+h: «مهارت‌های اجتماعی» هیچ معنایی نداره اگه واقعاً *به* آدما اهمیت ندیم.
 
 `hong({ body:"normal" });`
 
-h: Basically, just don't be a ^dick^.
+h: اساساً، فقط ^کیر^ نباش.
 
 `bb({ eyes:"annoyed", mouth:"smile" });`
 
-b: That's a motivational poster caption right there.
+b: این دقیقاً یه کپشنِ پوسترِ انگیزشیه.
 
 `hong({ body:"shrug", mouth:"narrow" });`
 
-h: “Don't Be A ^Dick^™”
+h: «^کیر^ نباش™»
 
 (#act4_something_else)
 
@@ -948,29 +944,29 @@ h: “Don't Be A ^Dick^™”
 
 `bb({ eyes:"angry" })`
 
-b: We'll become a Welcome doormat, saying Please and Thank You as people wipe their feet on us!
+b: تبدیل به یه زیرپاییِ خوش‌آمد می‌شیم که می‌گه خواهش و تشکر در حالی که آدما پاهاشون رو رومون پاک می‌کنن!
 
 `bb({ mouth:"scream", eyes:"scream" })`
 
-b: We'll kiss so much butt, it'll look like we're wearing brown lipstick!
+b: انقدر کون می‌لیسیم که انگار رژِ لبِ قهوه‌ای زدیم!
 
 ```
 bb({ mouth:"normal", eyes:"normal" });
 hong( body:"chin" });
 ```
 
-h: Nah, you're right. "Social skills" can't be just about pleasing others, it's also got to be about setting *boundaries.*
+h: نه، درست می‌گی. «مهارت‌های اجتماعی» نمی‌تونه فقط درباره‌ی خوشحال کردنِ بقیه باشه، باید درباره‌ی گذاشتن *مرز* هم باشه.
 
 `hong( body:"one_up" });`
 
-h: We can't invite others into our home, if we have no walls to hold up our home.
+h: نمی‌تونیم بقیه رو به خونمون دعوت کنیم، اگه دیواری نداشته باشیم که خونمون رو نگه داره.
 
 ```
 hong( eyes:"angry", mouth:"narrow" });
 bb( eyes:"annoyed", mouth:"smile" });
 ```
 
-h: Also... re: that lipstick mental image... *ew??*
+h: ضمناً... در مورد اون تصویرِ ذهنیِ رژ لب... *اه؟؟*
 
 (#act4_something_else)
 
@@ -978,26 +974,26 @@ h: Also... re: that lipstick mental image... *ew??*
 
 `bb({ eyes:"annoyed" });`
 
-h: We might fail. Actually, we *will* fail.
+h: ممکنه شکست بخوریم. در واقع، *حتماً* شکست می‌خوریم.
 
 ```
 bb({ eyes:"normal" });
 hong({ eyes:"surprise", body:"shrug" });
 ```
 
-h: And that's fine! Failing is how anyone learns anything new at first!
+h: و اشکالی نداره! شکست خوردن روشیه که هر کسی اولِ کار یاد می‌گیره!
 
 `hong({ body:"normal", eyes:"normal" });`
 
-h: So let's fail forward together, yeah?
+h: پس بریم با هم به جلو شکست بخوریم، آره؟
 
 `bb({ eyes:"normal_r" });`
 
-b: Sure, I guess... worst-case scenario, we can just skip town and get a new identity.
+b: آره، حدس می‌زنم... بدترین حالت، می‌تونیم شهر رو ترک کنیم و یه هویت جدید بگیریم.
 
 `bb({ eyes:"normal" });`
 
-h: Yeah I think that only costs two bitcoins these days.
+h: آره فکر کنم امروزه فقط دو تا بیت‌کوین هزینه داره.
 
 (#act4_something_else)
 
@@ -1008,33 +1004,33 @@ hong({ body:"one_up" });
 bb({ eyes:"normal" });
 ```
 
-h: We could try some experiments!
+h: می‌تونیم چند تا آزمایش بکنیم!
 
 `hong({ body:"chin" });`
 
-h: We could ping a friend to hang out, reconnect with an old pal, or even just chat with a barista.
+h: می‌تونیم به یه رفیق پینگ بدیم که بیرون بریم، با یه رفیق قدیمی رابطه رو تازه کنیم، یا حتی فقط با باریستا حرف بزنیم.
 
 `hong({ body:"normal" });`
 
-h: I think we may find we're more likeable than we suspect.
+h: فکر کنم می‌فهمیم که بیشتر از چیزی که فکر می‌کنیم دوست‌داشتنی هستیم.
 
 `bb({ eyes:"annoyed" });`
 
-[What if these are small, cheap "wins"?](#act4_alone_experiment_cheap)
+[اگه اینا بردهای کوچیک و ارزون باشن چی؟](#act4_alone_experiment_cheap)
 
-[What if this is a burden to others?](#act4_alone_experiment_burden)
+[اگه این یه بارِ روی دوش بقیه باشه چی؟](#act4_alone_experiment_burden)
 
-[But small talk isn't the *real* us!](#act4_alone_experiment_real_us)
+[ولی حرفِ کوچیک *واقعی* ما نیست!](#act4_alone_experiment_real_us)
 
 # act4_alone_experiment_real_us
 
 `bb({ eyes:"sad" });`
 
-b: If we put on a shallow smile, we'll never really connect with anyone,
+b: اگه یه لبخندِ سطحی بزنیم، هیچ‌وقت واقعاً به کسی وصل نمی‌شیم،
 
 `bb({ eyes:"super_sad" });`
 
-b: *But* if we open up, other people will see all our messed-up insides!
+b: *ولی* اگه باز بشیم، بقیه همه‌ی درونِ خراب‌مون رو می‌بینن!
 
 `hong({body:"chin", mouth:"narrow", MOUTH_LOCK:true})`
 
@@ -1045,64 +1041,64 @@ hong({body:"normal", mouth:"normal"});
 bb({eyes:"normal"});
 ```
 
-h: Roll over.
+h: غلت بزن.
 
-b: What.
+b: چی.
 
 `hong({body:"hands_1"})`
 
-h: When dogs want to show love and trust, they make themselves vulnerable by exposing their belly.
+h: وقتی سگ‌ها می‌خوان عشق و اعتماد نشون بدن، با نشون دادنِ شکمشون خودشون رو آسیب‌پذیر می‌کنن.
 
 `hong({body:"one_up"})`
 
-h: Maybe we're not *yet* secure enough to be too vulnerable, but with enough training,
+h: شاید ما هنوز اون‌قدر امن نباشیم که زیادی آسیب‌پذیر بشیم، ولی با تمرین کافی،
 
 `hong({body:"normal", eyes:"surprise"})`
 
-h: One day we can show people the real us – all messed-up, all human.
+h: یه روز می‌تونیم نسخه‌ی واقعی‌مون رو به آدم‌ها نشون بدیم – همه‌ی خرابی، همه‌ی انسانیت.
 
 ```
 hong({eyes:"normal"});
 bb({ eyes:"super_sad", mouth:"smile", body:"chest" });
 ```
 
-b: I'll roll over if you give me a treat.
+b: اگه بهم جایزه بدی غلت می‌زنم.
 
 `bb({ eyes:"normal", mouth:"normal" });`
 
-h: No.
+h: نه.
 
 (#act4_something_else)
 
 
 # act4_alone_experiment_cheap
 
-b: Saying "hi" to the barista isn't exactly gold-medal performance in the Social Butterfly Olympics.
+b: گفتن «سلام» به باریستا دقیقاً عملکردِ مدال طلا تو المپیکِ پروانه‌ی اجتماعی نیست.
 
 ```
 hong({ body:"point", eyes:"surprise" });
 bb({ eyes:"normal" });
 ```
 
-h: It is for *us!*
+h: برای *ما* هست!
 
 `hong({ body:"one_up", eyes:"annoyed" });`
 
-h: In the social arena, we're not even featherweight class, we're like... quark-weight.
+h: تو عرصه‌ی اجتماعی، ما حتی در سبکِ پَر هم نیستیم، ما مثل... سبکِ کوارک هستیم.
 
 `hong({ body:"normal", eyes:"normal" });`
 
-h: If we have to start with small, cheap wins, so be it. Gotta climb the 1st step before the 1000th step.
+h: اگه مجبوریم با بردهای کوچیک و ارزون شروع کنیم، همینه. باید پله‌ی ۱ رو بریم قبل از پله‌ی ۱۰۰۰.
 
-b: Yeah! Maybe after saying "Hi", we can advance to saying...
+b: آره! شاید بعد از گفتن «سلام»، بتونیم به گفتن... ارتقا پیدا کنیم...
 
 `bb({ body:"two_up", mouth:"smile", eyes:"smile_u" });`
 
-b: *"How are you?"*
+b: *"چطوری؟"*
 
 `hong({ body:"shrug", mouth:"smile", eyes:"surprise_l" });`
 
-h: *"Not much!"*
+h: *"خیلی!"*
 
 (#act4_something_else)
 
@@ -1110,29 +1106,29 @@ h: *"Not much!"*
 
 `bb({ eyes:"suspect_r" })`
 
-b: Maybe the barista just wants to make some dang coffee, not be an *experiment* to see if our social skills suck.
+b: شاید باریستا فقط می‌خواد یه قهوه بسازه، نه اینکه *آزمایشی* باشه که بفهمیم مهارت‌های اجتماعیمون گه هستن یا نه.
 
 `bb({ eyes:"annoyed" })`
 
-h: Well, if it turns out we *are* being a burden...
+h: خب، اگه معلوم بشه ما *واقعاً* بار روی دوشیم...
 
 ```
 hong({ eyes:"surprise" });
 bb({ eyes:"normal" });
 ```
 
-h: That's good to know, too!
+h: اینم خوبه که بدونیم!
 
 `hong({ eyes:"normal" });`
 
-h: We can then learn how to pro-actively ask people what they're comfortable with, to know and respect others' boundaries.
+h: اون‌وقت می‌تونیم یاد بگیریم چطور فعالانه از آدم‌ها بپرسیم با چی راحتن، تا مرزهای بقیه رو بفهمیم و احترام بذاریم.
 
 ```
 hong({ eyes:"annoyed_l", mouth:"narrow" });
 bb({ eyes:"annoyed", mouth:"smile" });
 ```
 
-h: Y'know, all that "inter-personal skills" ^crap^ we see in counselor brochures.
+h: می‌دونی، همه‌ی اون ^crap^ـی که تو بروشورهای مشاوره می‌بینی به اسم «مهارت‌های بین فردی».
 
 (#act4_something_else)
 
@@ -1147,43 +1143,43 @@ _.a4_fears_discussed += 1;
 
 `bb({ eyes:"annoyed_r" })`
 
-b: I want to defend your moral needs, that drive to become a better person,
+b: می‌خوام از نیازهای اخلاقیت دفاع کنم، اون انگیزه‌ای که بشی آدمِ بهتری،
 
 `bb({ eyes:"sad_d" })`
 
-b: But it just feels like deep down, we're so fundamentally... broken.
+b: ولی فقط حس می‌کنم تو عمق وجود، ما خیلی اساسی... خرابیم.
 
 `bb({ body:"two_up", eyes:"angry" })`
 
 {{if _.INJURED}}
-b: And don't tell me we're *not* messed up. We jumped off a *roof*.
+b: و بهم نگو ما خراب *نیستیم*. ما از یه *پشت‌بام* پریدیم.
 {{/if}}
 
 {{if !_.INJURED}}
-b: And don't tell me we're *not* messed up. We almost jumped off a *roof*.
+b: و بهم نگو ما خراب *نیستیم*. ما تقریباً از یه *پشت‌بام* پریدیم.
 {{/if}}
 
 `bb({ body:"normal", eyes:"sad" })`
 
 {{if _.a4_fears_discussed==1}}
-b: I dunno, enough of *me* choosing what to say next. What do *you* say, human?
+b: نمی‌دونم، دیگه کافیه *من* انتخاب کنم چی بگم. *تو* چی می‌گی، آدم؟
 {{/if}}
 
 {{if _.a4_fears_discussed==2}}
-b: Again, back to you, human. What do you think?
+b: بازم، برگرد به تو، آدم. فکر می‌کنی چی؟
 {{/if}}
 
 {{if _.a4_fears_discussed==3}}
-b: More thoughts, human?
+b: فکر دیگه‌ای داری، آدم؟
 {{/if}}
 
 `Game.OVERRIDE_CHOICE_SPEAKER = "h"`
 
-[So we're broken. Let's fix us.](#act4_bad_fix)
+[پس خرابیم. بریم خودمون رو درست کنیم.](#act4_bad_fix)
 
-[So we're broken. Let's accept it.](#act4_bad_accept)
+[پس خرابیم. بریم قبولش کنیم.](#act4_bad_accept)
 
-[Thank you.](#act4_thanks) `_.thanks_for = "moral well-being";`
+[ممنون.](#act4_thanks) `_.thanks_for = "سلامت اخلاقی";`
 
 # act4_bad_fix
 
@@ -1192,48 +1188,48 @@ bb({eyes:"normal"});
 hong({body:"chin"});
 ```
 
-h: We could slowly build better habits, get our life more in line with what we value,
+h: می‌تونیم کم‌کم عادت‌های بهتری بسازیم، زندگیمون رو بیشتر با چیزی که ارزش می‌دیم هم‌راستا کنیم،
 
 `hong({body:"one_up"});`
 
-h: And if needed, we could get professional help – a therapist or counsellor.
+h: و اگه لازم شد، می‌تونیم کمک حرفه‌ای بگیریم – یه تراپیست یا مشاور.
 
 `hong({body:"normal"});`
 
-h: There's ways to fix us.
+h: راه‌هایی هست که خودمون رو درست کنیم.
 
-[What if we can't fix it all?](#act4_bad_fix_cant)
+[اگه نتونیم همه‌ش رو درست کنیم چی؟](#act4_bad_fix_cant)
 
-[What if we fix *too* much?](#act4_bad_fix_too_much)
+[اگه *زیادی* درستش کنیم چی؟](#act4_bad_fix_too_much)
 
-[We can't afford professional help.](#act4_bad_fix_afford)
+[پولِ کمکِ حرفه‌ای رو نداریم.](#act4_bad_fix_afford)
 
 # act4_bad_fix_cant
 
 `hong({eyes:"annoyed"});`
 
-h: Nah, I guess you're right.
+h: نه، حدس می‌زنم درست می‌گی.
 
-h: We can't fix it all.
+h: نمی‌تونیم همه‌ش رو درست کنیم.
 
 `bb({mouth:"scream", eyes:"scream_sad"});`
 
-b: Ahhh I knew it we'll always be broken!
+b: آآآ می‌دونستم همیشه خراب می‌مونیم!
 
 `hong({eyes:"surprise"});`
 
-h: But we can at least be *less* broken.
+h: ولی حداقل می‌تونیم *کمتر* خراب باشیم.
 
 ```
 bb({mouth:"normal", eyes:"annoyed"});
 hong({eyes:"sad", mouth:"smile"});
 ```
 
-h: Scars heal with time, but they never go away. And that's okay.
+h: اسکارها با زمان بهبود پیدا می‌کنن، ولی هیچ‌وقت نمی‌رن. و اشکالی نداره.
 
 `bb({eyes:"annoyed_r"});`
 
-b: I guess. Besides,
+b: حدس می‌زنم. ضمناً،
 
 ```
 Game.FORCE_TEXT_Y = 460;
@@ -1241,7 +1237,7 @@ Game.clearText();
 publish("act4-sexy", [true]);
 ```
 
-b: Scars are *sexy.*
+b: اسکارها *سکسین.*
 
 ```
 Game.FORCE_TEXT_Y = -1;
@@ -1251,7 +1247,7 @@ bb({body:"chest", mouth:"smile_talk", MOUTH_LOCK:true, eyes:"sexy"}, 0);
 hong({eyes:"normal", mouth:"normal"}, 0);
 ```
 
-h: Please do not do that.
+h: لطفاً این کار رو نکن.
 
 (#act4_something_else)
 
@@ -1259,35 +1255,35 @@ h: Please do not do that.
 
 `bb({ eyes:"angry_d" })`
 
-b: This feels sick to admit, but... some part of me *wants* to have this disorder.
+b: حال بهم می‌خوره که بگم، ولی... یه بخشی از من *می‌خواد* این اختلال رو داشته باشه.
 
 `bb({ eyes:"angry" })`
 
-b: I mean, without it, won't we be *boring?*
+b: یعنی، بدون اون، ما *خسته‌کننده* نمی‌شیم؟
 
 `bb({ eyes:"sad_r", body:"one_up" })`
 
-b: Without the disorder, won't our art become stale and bland?
+b: بدون اختلال، هنرمون کهنه و بی‌مزه نمی‌شه؟
 
 `bb({ eyes:"sad_u", body:"two_up" })`
 
-b: Without the disorder, won't we be unable to connect with our friends who have the disorder?
+b: بدون اختلال، دیگه نمی‌تونیم با رفقامون که اونا هم اختلال دارن ارتباط بگیریم؟
 
 `bb({ eyes:"sad", body:"chest" })`
 
-b: If we're ever content with life, won't we stop driving ourselves to do great things?
+b: اگه هیچ‌وقت از زندگی راضی بشیم، دیگه خودمون رو برای انجام کارهای بزرگ مجبور نمی‌کنیم؟
 
 `hong({ MOUTH_LOCK:true })`
 
 h: ...
 
-h: If we even fear... "running out of fears"...
+h: اگه حتی بترسیم که... «ترس‌هامون تموم بشن»...
 
-h: I don't think we're gonna run out of fears.
+h: فکر نکنم ترس‌هامون تموم بشن.
 
 `bb({ eyes:"smile_u", body:"normal", mouth:"smile" })`
 
-b: Oh, yeah! Whew! What a relief!
+b: اوه، آره! اوف! چه راحتی!
 
 (#act4_something_else)
 
@@ -1295,53 +1291,53 @@ b: Oh, yeah! Whew! What a relief!
 
 `bb({ body:"one_up", eyes:"sexy", mouth:"normal" })`
 
-b: "Doc, I'm anxious that I'm paying $100/hr just to hear you ask *how does that make you feel?*"
+b: «دکتر، اضطراب دارم که ساعتی ۱۰۰ دلار دارم می‌دم فقط بشنوم بپرسی *این چه حسی بهت می‌ده؟*»
 
 `bb({ body:"paw", eyes:"closed", mouth:"narrow" })`
 
-b: "Mm-hmm. And how does that make you feel?"
+b: «هوم. و این چه حسی بهت می‌ده؟»
 
 ```
 bb({ body:"normal", eyes:"normal", mouth:"normal" });
 hong({ eyes:"sad" });
 ```
 
-h: Nah, that's a totally reasonable worry.
+h: نه، اون یه نگرانیِ کاملاً منطقیه.
 
 `hong({ eyes:"annoyed", mouth:"sad" });`
 
-h: And it genuinely sucks that mental healthcare isn't affordable for lots of folks.
+h: و واقعاً گهه که مراقبتِ بهداشت روان برای خیلی‌ها مقرون‌به‌صرفه نیست.
 
 `hong({ eyes:"normal", mouth:"normal" });`
 
-h: Still, there are some cheap or free options:
+h: با این حال، چند تا گزینه‌ی ارزون یا رایگان هست:
 
 `hong({ body:"chin" })`
 
-h: Support groups, online therapy, student/non-profit health centers...
+h: گروه‌های حمایت، تراپی آنلاین، مراکز بهداشتی دانشجویی/غیرانتفاعی...
 
 `hong({ body:"hands_1" })`
 
-h: Building habits like meditation, sleeping well, chatting regularly with friends, learning new things...
+h: ساختنِ عادت‌هایی مثل مدیتیشن، خوابِ خوب، حرف زدن منظم با رفقا، یادگیری چیزای جدید...
 
 `hong({ body:"hands_2" })`
 
-h: Going to a library to borrow workbooks for evidence-based psychotherapies...
+h: رفتن به کتابخونه برای قرض گرفتن workbookهای روان‌درمانیِ مبتنی بر شواهد...
 
 `hong({ body:"one_up" })`
 
-h: There's a full list of resources at the end of this game!
+h: یه لیست کامل از منابع تهِ این بازی هست!
 
 ```
 hong({ body:"normal" });
 bb({ eyes:"annoyed", mouth:"narrow" });
 ```
 
-b: Well *that* fourth wall didn't last long.
+b: خب *اون* دیوار چهارم زیاد دوام نیومد.
 
 `hong({ body:"point" });`
 
-h: Some things are more important than narrative convention. Such as mental health.
+h: بعضی چیزا مهم‌تر از قراردادِ روایتن. مثل سلامت روان.
 
 (#act4_something_else)
 
@@ -1353,48 +1349,48 @@ bb({ eyes:"normal" });
 hong({ eyes:"normal_l", body:"one_up", mouth:"narrow" });
 ```
 
-h: I mean, that's what therapists say right? Accept all your emotions, even the negative ones?
+h: یعنی، این همونیه که تراپیست‌ها می‌گن نه؟ همه‌ی احساساتت رو بپذیر، حتی منفی‌ها رو؟
 
 ```
 bb({ eyes:"annoyed" });
 hong({ eyes:"normal", body:"normal", mouth:"normal" });
 ```
 
-b: Wait.
+b: صبر کن.
 
-["Accept" as in *give up*?](#act4_bad_accept_give_up)
+[«پذیرفتن» به معنای *تسلیم شدن*؟](#act4_bad_accept_give_up)
 
-["Accept" as in *approve*?](#act4_bad_accept_approve)
+[«پذیرفتن» به معنای *تأیید کردن*؟](#act4_bad_accept_approve)
 
-["Accept" as in *take literally*?](#act4_bad_accept_literally)
+[«پذیرفتن» به معنای *تحت‌اللفظی گرفتن*؟](#act4_bad_accept_literally)
 
 # act4_bad_accept_give_up
 
 `bb({ eyes:"angry", body:"one_up" });`
 
-b: Do you think Martin Luther King would've said, "Shucks we can't sit in the front of the bus, let's just *accept* it?"
+b: فکر می‌کنی مارتین لوتر کینگ می‌گفت، «اوه ما نمی‌تونیم جلو اتوبوس بشینیم، بریم *بپذیریمش*»؟
 
 `bb({ eyes:"angry_r", body:"two_up" });`
 
-b: Why does the Self-Help Industrial Complex think waving the white flag is some *profound wisdom?*
+b: چرا مجتمعِ صنعتیِ self-help فکر می‌کنه پرچم سفید تکون دادن یه حکمتِ *عمیقه*؟
 
 `bb({ eyes:"annoyed", body:"normal" });`
 
-h: I think therapists mean "accept" bad things as in: acknowledging they exist and are hard to change,
+h: فکر کنم تراپیست‌ها منظورشون از «پذیرفتن» چیزای بده اینه: اذعان به اینکه وجود دارن و سخت‌تغییرن،
 
-h: But not necessarily giving up a commitment to change.
+h: ولی نه لزوماً تسلیم شدنِ تعهد به تغییر.
 
 `bb({ eyes:"suspect" });`
 
-b: Then therapists should say *acknowledge*, not *accept*.
+b: پس تراپیست‌ها باید بگن *اذعان*، نه *پذیرش*.
 
 `hong({ body:"chin", eyes:"annoyed" });`
 
-h: Yeah come to think of it, "accept" is kinda confusing.
+h: آره حالا که فکرش می‌کنم، «پذیرش» یه کم گیج‌کننده‌ست.
 
 `bb({ eyes:"closed", mouth:"narrow" });`
 
-b: Well, I *acknowledge* that.
+b: خب، من *اذعان* می‌کنم به اون.
 
 (#act4_something_else)
 
@@ -1402,52 +1398,52 @@ b: Well, I *acknowledge* that.
 
 `bb({ eyes:"angry" });`
 
-b: Like it's *good* that we're broken or something? No!
+b: مثلاً اینکه *خوبه* که ما خرابیم؟ نه!
 
 `bb({ eyes:"angry_r", body:"one_up" });`
 
-b: All those dang Hollywood screenwriters who romanticize mental illness are full of crud!
+b: همه‌ی اون نویسنده‌های لعنتی هالیوودی که بیماری روانی رو رمانتیک می‌کنن پر از گهن!
 
 `bb({ eyes:"angry", body:"two_up" });`
 
-b: Having a mental disorder *sucks!* It robs people of *lives!* Why should we "accept" that?!
+b: داشتنِ اختلال روانی *گَهه!* زندگی آدما رو می‌دزده! چرا باید اونو «بپذیریم»؟!
 
 `bb({ body:"normal" });`
 
-h: I think therapists mean "accept" our emotions as in: be patient with them.
+h: فکر کنم تراپیست‌ها منظورشون از «پذیرفتن» احساساتمون اینه: باهاشون صبور باشیم.
 
 ```
 hong({ body:"one_up" });
 bb({ eyes:"normal" });
 ```
 
-h: Like how struggling in quicksand makes you sink faster, and the solution is to patiently lie flat,
+h: مثل اینکه مبارزه تو شن‌های نرم باعث می‌شه سریع‌تر فرو بری، و راه‌حل اینه که صبورانه صاف بخوابی،
 
 `hong({ eyes:"surprise" });`
 
 {{if _.INJURED}}
-h: Fighting against you, my fear, led me to jump off a roof.
+h: جنگیدن با تو، ترسم، منو به پریدن از پشت‌بام رسوند.
 {{/if}}
 
 {{if !_.INJURED}}
-h: Fighting against you, my fear, almost led me to jump off a roof.
+h: جنگیدن با تو، ترسم، تقریباً منو به پریدن از پشت‌بام رسوند.
 {{/if}}
 
 `hong({ body:"normal", eyes:"normal" });`
 
-h: Instead, the solution is to do what we're doing now – not to fight, but to patiently be with each other.
+h: در عوض، راه‌حل اینه که کاری که الان داریم می‌کنیم رو بکنیم – نه جنگیدن، بلکه صبورانه کنار هم بودن.
 
 `bb({ eyes:"annoyed" });`
 
-b: Then they should say *that* instead of some problematic word like "accept".
+b: پس اونا باید *اون* رو بگن به جای یه کلمه‌ی مشکل‌ساز مثل «پذیرش».
 
 `hong({ body:"chin", eyes:"annoyed" });`
 
-h: Yeah come to think of it, "accept" kind of sucks.
+h: آره حالا که فکرش می‌کنم، «پذیرش» یه جورایی گهه.
 
 `bb({ eyes:"closed_annoyed", mouth:"narrow" });`
 
-b: I do not accept "accept".
+b: من «پذیرش» رو نمی‌پذیرم.
 
 (#act4_something_else)
 
@@ -1455,30 +1451,30 @@ b: I do not accept "accept".
 
 `bb({ eyes:"sad", body:"one_up" });`
 
-b: But we already *know* you shouldn't take me literally!
+b: ولی ما از قبل *می‌دونیم* که نباید منو تحت‌اللفظی بگیری!
 
 `bb({ eyes:"sad_u", body:"two_up" });`
 
-b: The whole *problem* is that I want to help you, but I suck at using words to do so!
+b: کل *مشکل* اینه که می‌خوام بهت کمک کنم، ولی تو استفاده از کلمات برای این کار خیلی گهم!
 
 `bb({ eyes:"sad", body:"normal" });`
 
-h: I think therapists mean "accept" your emotions as in: "don't fight or ignore them."
+h: فکر کنم تراپیست‌ها منظورشون از «پذیرفتن» احساساتت اینه: «باهاشون نجنگ یا نادیده‌شون نگیر.»
 
 `hong({ eyes:"surprise", body:"one_up" });`
 
-h: To listen to you, work *with* you, but not take what you say as 100% literal truth.
+h: که بهت گوش بدی، *باهات* کار کنی، ولی حرفت رو نگیری صددرصد حقیقتِ تحت‌اللفظی.
 
 ```
 hong({ eyes:"normal", body:"normal" });
-bb({ eyes:"annoyed", mouth:"normal" });`
+bb({ eyes:"annoyed", mouth:"normal" });
 ```
 
-b: Then therapists should say *that* instead of some vague confusing word like "accept".
+b: پس تراپیست‌ها باید *اون* رو بگن به جای یه کلمه‌ی مبهم و گیج‌کننده مثل «پذیرش».
 
 `hong({ body:"chin", eyes:"annoyed" });`
 
-h: I guess they suck at using words, too.
+h: حدس می‌زنم اونا هم تو استفاده از کلمات گهن.
 
 (#act4_something_else)
 
@@ -1493,11 +1489,11 @@ hong({ body:"normal", mouth:"normal", eyes:"normal" });
 ```
 
 {{if _.a4_fears_discussed==1}}
-h: Anyway, anything else you wanna chat about?
+h: به هر حال، چیز دیگه‌ای هست که بخوای درباره‌ش حرف بزنیم؟
 {{/if}}
 
 {{if _.a4_fears_discussed==2}}
-h: So, anything else on your heavy heart?
+h: پس، چیز دیگه‌ای روی دلِ سنگینت هست؟
 {{/if}}
 
 {{if _.a4_fears_discussed==3}}
@@ -1505,34 +1501,34 @@ h: So, anything else on your heavy heart?
 {{/if}}
 
 {{if _.a4_talked_about_harm!=true}}
-[I'm scared we'll be harmed.](#act4_harm)
+[می‌ترسم آسیب ببینیم.](#act4_harm)
 {{/if}}
 
 {{if _.a4_talked_about_alone!=true}}
-[I'm scared we'll be alone.](#act4_alone)
+[می‌ترسم تنها بمونیم.](#act4_alone)
 {{/if}}
 
 {{if _.a4_talked_about_bad!=true}}
-[I'm scared we're bad people.](#act4_bad)
+[می‌ترسم آدمای بدی باشیم.](#act4_bad)
 {{/if}}
 
-[Nah, I'm good for now.](#act4c_prelude)
+[نه، فعلاً خوبم.](#act4c_prelude)
 
 # act4_something_else_2
 
-h: Okay, I think we've talked about all our fears now.
+h: باشه، فکر کنم درباره‌ی همه‌ی ترس‌هامون حرف زدیم.
 
-b: Yes, there are only three fears.
+b: آره، فقط سه تا ترس هست.
 
-h: Yup, exactly three.
+h: آره، دقیقاً سه تا.
 
-b: Convenient.
+b: چه راحت.
 
 (#act4c)
 
 # act4c_prelude
 
-h: Good chat, team.
+h: حرفِ خوبی بود، تیم.
 
 (#act4c)
 
@@ -1553,28 +1549,28 @@ h: ...
 
 `bb({eyes:"annoyed_d"})`
 
-b: This isn't some *game*, you know.
+b: می‌دونی، این یه *بازی* نیست.
 
 `bb({eyes:"angry_d", body:"one_up"})`
 
-b: Building a healthy relationship with your emotions isn't as simple as clicking buttons on a screen.
+b: ساختن یه رابطه‌ی سالم با احساساتت به اندازه‌ی کلیک کردن روی دکمه‌های یه صفحه ساده نیست.
 
 `bb({eyes:"sad", body:"normal"})`
 
-b: *Can* we really get along?
+b: *می‌تونیم* واقعاً کنار بیایم؟
 
-b: *Can* we work together, as a team?
+b: *می‌تونیم* با هم، به‌عنوان یه تیم، کار کنیم؟
 
 `hong({eyes:"sad", body:"one_up"})`
 
-h: Well,
+h: خب،
 
 ```
 hong({eyes:"surprise_l"});
 bb({eyes:"normal"});
 ```
 
-a: E-excuse me...
+a: ب-ب-ببخشید...
 
 ```
 Game.clearText();
@@ -1592,50 +1588,50 @@ music('campus', {volume:0.5, fade:1});
 
 `publish("act4", ["alshire", 0]);`
 
-a: W-wo-would you mind if I sat with you for lunch?
+a: م-مم-ممکنه ناراحت بشی اگه براتون ناهار بشینم؟
 
 `publish("act4", ["alshire", 1]);`
 
 {{if _.TOP_FEAR=="harm"}}
-s: *This* is your crush? Why are they sitting alone like a psycho serial killer?
+s: *این* کراشته؟ چرا مثل یه قاتلِ روانی تنها می‌شینن؟
 {{/if}}
 
 {{if _.TOP_FEAR=="alone"}}
-s: Asking your crush if you can sit with them? Do you know how *needy* we sound?!
+s: از کراشت می‌پرسی می‌تونی بشینی باهاشون؟ می‌دونی چقدر *نیازمند* به نظر می‌رسیم؟!
 {{/if}}
 
 {{if _.TOP_FEAR=="bad"}}
-s: *This* is your crush? We interrupted their peace and quiet! We're such a burden!
+s: *این* کراشته؟ ما آرامش و سکوتشون رو قطع کردیم! ما یه باریم!
 {{/if}}
 
 `publish("act4", ["alshire", 2]);`
 
-a: I- I mean- it's, it's okay if not, I just...
+a: م- یعنی- اشکالی نداره اگه نه، من فقط...
 
 `publish("act4", ["alshire", 3]);`
 
 `Game.OVERRIDE_CHOICE_SPEAKER = "h2"`
 
-[Wait, didn't I see you at the party?](#act4d_recognition) `publish("act4", ["hong_to_alshire",1])`
+[صبر کن، تو رو تو مهمانی ندیدم؟](#act4d_recognition) `publish("act4", ["hong_to_alshire",1])`
 
-[Yeah, of course! Come here.](#act4d_yes) `publish("act4", ["hong_to_alshire",2])`
+[آره، حتماً! بیا اینجا.](#act4d_yes) `publish("act4", ["hong_to_alshire",2])`
 
-[Sorry, I need alone time right now.](#act4d_no) `publish("act4", ["hong_to_alshire",8])`
+[ببخشید، الان نیاز به تنهایی دارم.](#act4d_no) `publish("act4", ["hong_to_alshire",8])`
 
 # act4d_recognition
 
 `publish("act4", ["hong_to_alshire",2]);`
 
-h2: Yeah you were on the couch! At the first party I went to...
+h2: آره تو روی مبل بودی! تو اولین مهمانی که رفتم...
 
 `publish("act4", ["hong_to_alshire",10]);`
 
 {{if _.a2_ending=="fight"}}
-h2: Where I had that panic attack and punched the host.
+h2: جایی که اون حمله‌ی هراس رو داشتم و به میزبان مشت زدم.
 {{/if}}
 
 {{if _.a2_ending=="flight"}}
-h2: Where I had that panic attack and ran out crying.
+h2: جایی که اون حمله‌ی هراس رو داشتم و گریه کردم و در رفتم.
 {{/if}}
 
 ```
@@ -1643,18 +1639,18 @@ publish("act4", ["hong_to_alshire", 0]);
 publish("act4", ["bb_to_alshire", _.INJURED ? 3 : 1]);
 ```
 
-b: Hang on human, we may be making them uncomfortable.
+b: صبر کن آدم، ممکنه داریم ناراحتشون می‌کنیم.
 
 ```
 publish("act4", ["hong_to_alshire", 3]);
 publish("act4", ["bb_to_alshire", _.INJURED ? 2 : 0]);
 ```
 
-h2: Ah, I don't mean to put you on the spot!
+h2: آه، نمی‌خوام ناراحتت کنم!
 
 `publish("act4", ["hong_to_alshire",4]);`
 
-h2: Just remembering a friendly face, is all.
+h2: فقط یه چهره‌ی آشنا رو یادم اومد، همین.
 
 ```
 publish("act4", ["hong_to_alshire",5]);
@@ -1662,15 +1658,15 @@ publish("act4", ["alshire", 4]);
 ```
 
 {{if _.TOP_FEAR=="harm"}}
-s: AHHHHH I KNEW IT! THEY'RE A DANGEROUS PANIC-DRIVEN PSYCHO!
+s: آآآآآ می‌دونستم! اونا یه روانیِ خطرناکِ هراس‌زده‌ان!
 {{/if}}
 
 {{if _.TOP_FEAR=="alone"}}
-s: AAHHH THE FIRST IMPRESSION WE MADE WAS "WITNESSED MY TRAUMA"! THAT MEANS THEY HATE US!
+s: آآآآ اولین برداشتی که از ما داشتن «شاهدِ ترومای من بود»! یعنی از ما متنفرن!
 {{/if}}
 
 {{if _.TOP_FEAR=="bad"}}
-s: AAAHHH WE MADE SOMEONE REMEMBER A TRAUMATIC EVENT. OUR MERE PRESENCE HURTS OTHERS.
+s: آآآآ ما باعث شدیم یکی یه رویدادِ تروماتیک رو یادش بیاد. حضورِ محضِ ما به بقیه آسیب می‌زنه.
 {{/if}}
 
 (#act4e)
@@ -1682,18 +1678,18 @@ publish("act4", ["hong_to_alshire", 5]);
 publish("act4", ["bb_to_alshire", _.INJURED ? 3 : 1]);
 ```
 
-b: Hang on human, they seem uncomfortable.
+b: صبر کن آدم، به نظر می‌رسه ناراحتن.
 
 ```
 publish("act4", ["hong_to_alshire", 6]);
 publish("act4", ["bb_to_alshire", _.INJURED ? 2 : 0]);
 ```
 
-h2: Ah, no pressure of course!
+h2: آه، هیچ فشاری نیست!
 
 `publish("act4", ["hong_to_alshire", 4]);`
 
-h2: Just saying, you can sit here if you want to.
+h2: فقط می‌گم، اگه خواستی می‌تونی اینجا بشینی.
 
 ```
 publish("act4", ["hong_to_alshire", 5]);
@@ -1701,15 +1697,15 @@ publish("act4", ["alshire", 4]);
 ```
 
 {{if _.TOP_FEAR=="harm"}}
-s: THEY'RE BEING *TOO* FRIENDLY! LIKE TED BUNDY, THE SERIAL KILLER!
+s: اونا دارن *زیادی* مهربون رفتار می‌کنن! مثل تد باندی، قاتل سریالی!
 {{/if}}
 
 {{if _.TOP_FEAR=="alone"}}
-s: THEY'RE JUST ACTING NICE! NO ONE *REALLY* WANTS TO BE CLOSE TO US!
+s: اونا فقط دارن خوب رفتار می‌کنن! هیچ‌کس *واقعاً* نمی‌خواد به ما نزدیک بشه!
 {{/if}}
 
 {{if _.TOP_FEAR=="bad"}}
-s: AHHH WE ALWAYS MAKE OTHERS FEEL AWKWARD! WE'RE A STAIN UPON THE EARTH!
+s: آآآآ ما همیشه بقیه رو به راحتی نمی‌رسونیم! ما یه لکه روی زمینیم!
 {{/if}}
 
 (#act4e)
@@ -1721,18 +1717,18 @@ publish("act4", ["hong_to_alshire", 9]);
 publish("act4", ["bb_to_alshire", _.INJURED ? 3 : 1]);
 ```
 
-b: Hang on human, we may be making them uncomfortable.
+b: صبر کن آدم، ممکنه داریم ناراحتشون می‌کنیم.
 
 ```
 publish("act4", ["hong_to_alshire", 3]);
 publish("act4", ["bb_to_alshire", _.INJURED ? 2 : 0]);
 ```
 
-h2: Ah, I don't mean to be rude!
+h2: آه، نمی‌خوام بی‌ادب باشم!
 
 `publish("act4", ["hong_to_alshire", 6]);`
 
-h2: I just need some time to process my emotions. Please don't take it as a personal rejection.
+h2: فقط یه کم وقت نیاز دارم که احساساتم رو پردازش کنم. لطفاً به‌عنوان ردِ شخصی نگیرش.
 
 ```
 publish("act4", ["hong_to_alshire", 7]);
@@ -1740,15 +1736,15 @@ publish("act4", ["alshire", 4]);
 ```
 
 {{if _.TOP_FEAR=="harm"}}
-s: WHAT SICK, TWISTED THOUGHTS ARE THEY PROCESSING?! WHAT DARK DESIRES FILL THIS PSYCHO'S HEART?!
+s: دارن چه افکارِ مریض و پیچیده‌ای رو پردازش می‌کنن؟! چه آرزوهای تاریکی قلب این روانی رو پر کرده؟!
 {{/if}}
 
 {{if _.TOP_FEAR=="alone"}}
-s: WE'VE BEEN PERSONALLY REJECTED! WE'LL NEVER BE LOVED!
+s: ما به‌صورت شخصی رد شدیم! هیچ‌وقت دوست‌داشته نمی‌شیم!
 {{/if}}
 
 {{if _.TOP_FEAR=="bad"}}
-s: WE INTERRUPTED THEIR EMOTIONAL PROCESSING! NOW THEY'LL BE TRAUMATIZED FOREVER AND IT'S ALL OUR FAULT!
+s: ما پردازشِ احساسی‌شون رو قطع کردیم! حالا برای همیشه تروما می‌گیرن و همه‌اش تقصیر ماست!
 {{/if}}
 
 (#act4e)
@@ -1760,7 +1756,7 @@ Game.WORDS_HEIGHT_BOTTOM = 195;
 publish("act4", ["alshire", 6]);
 ```
 
-s: RUN RUN RUN RUN RUN RUN RUN RUN RUN RUN RUN RUN RUN RUN RUN
+s: فرار فرار فرار فرار فرار فرار فرار فرار فرار فرار فرار فرار فرار فرار فرار
 
 ```
 Game.clearText();
@@ -1787,18 +1783,18 @@ Game.WORDS_HEIGHT_BOTTOM = -1; /* reset */
 
 `publish("act4-jumpcut-hong");`
 
-h: Huh. That was weird. I wonder what was going on in their head.
+h: هوم. اون عجیب بود. فکر کنم تو سرشون چی می‌گذشت.
 
 `publish("act4", ["hong_closer", 2]);`
 
-h: Anyway, you were saying?
+h: به هر حال، داشتی می‌گفتی؟
 
 ```
 publish("act4", ["hong_closer", 1]);
 publish("act4", ["bb_closer", 6]);
 ```
 
-b: Uh, I forget? Something about teams and work?
+b: اه، یادم رفت؟ یه چیزی درباره‌ی تیم و کار؟
 
 ```
 publish("act4", ["bb_closer", 0]);
@@ -1812,55 +1808,55 @@ publish("act4", ["hong_closer", 1]);
 publish("act4", ["bb_closer", 4]);
 ```
 
-b: They say you should "make peace" with your emotions, as if your emotions are *war criminals*.
+b: می‌گن باید با احساساتت «صلح کنی»، انگار احساساتت *جرم جنگی* هستن.
 
 `publish("act4", ["bb_closer", 7]);`
 
-b: But I want us to make *more* than mere peace! I want us to be *allies!*
+b: ولی من می‌خوام بیشتر از صِلح باشیم! می‌خوام *متحد* باشیم!
 
 `publish("act4", ["bb_closer", 3]);`
 
-b: I want to be a good guard-dog. Just like how hunger & thirst are alarms for your physical needs,
+b: می‌خوام یه سگِ نگهبانِ خوب باشم. درست مثل اینکه گرسنگی و تشنگی زنگ‌های خطرِ نیازهای فیزیکیتن،
 
 `publish("act4", ["bb_closer", 8]);`
 
-b: I want to be the alarm for your *psychological* needs – your needs for safety, belonging, goodness.
+b: می‌خوام زنگ خطرِ نیازهای *روانی* تو باشم – نیازهات به امنیت، تعلق، خوبی.
 
 `publish("act4", ["bb_closer", 1]);`
 
-b: But... I suck at my job, so I need you to train me.
+b: ولی... من تو کارم گهم، پس نیاز دارم که آموزشم بدی.
 
 `publish("act4", ["bb_closer", 4]);`
 
-b: I'm not "always valid," nor "always irrational." I'm just... trying my best. So, please,
+b: من نه «همیشه معتبرم»، نه «همیشه غیرمنطقی». فقط... دارم بهترین تلاشم رو می‌کنم. پس لطفاً،
 
 `publish("act4", ["bb_closer", 30]);`
 
-b: Help me help you!
+b: بهم کمک کن که بهت کمک کنم!
 
 `publish("act4", ["bb_closer", 6]);`
 
-b: Though, teaching an old dog new tricks *will* take a while. Maybe *years.*
+b: هرچند، به یه سگِ پیر یاد دادنِ ترفندهای جدید *کمی* طول می‌کشه. شاید *سال‌ها.*
 
 `publish("act4", ["bb_closer", 3]);`
 
-b: And sometimes I'll relapse, I'll slip into my old habits.
+b: و بعضی وقتا به عادت‌های قدیمی برمی‌گردم.
 
 `publish("act4", ["bb_closer", 2]);`
 
-b: I'll bark at shadows. I'll scare you with words. I might even show you some intrusive images of... things.
+b: به سایه‌ها پارس می‌کنم. با کلمات می‌ترسونمت. حتی ممکنه تصویرهای مزاحمِ... چیزایی بهت نشون بدم.
 
 `publish("act4", ["bb_closer", 9]);`
 
-b: I'm sorry! I'm a battered shelter dog! Battered dogs poop on your bed sometimes!
+b: متأسفم! من یه سگِ پناهگاهِ زده‌شده‌ام! سگ‌های زده‌شده بعضی وقتا رو تختت می‌ککن!
 
 `publish("act4", ["bb_closer", 4]);`
 
-b: But if you're patient with me... and just stay and sit with me...
+b: ولی اگه باهام صبور باشی... و فقط بمونی و پیشم بشینی...
 
 `publish("act4", ["bb_closer", 8]);`
 
-b: Maybe you can tame this wolf.
+b: شاید بتونی این گرگ رو رام کنی.
 
 `publish("act4", ["bb_closer", 0]);`
 
@@ -1870,11 +1866,11 @@ b: Maybe you can tame this wolf.
 
 `Game.OVERRIDE_CHOICE_SPEAKER = "h"`
 
-[Good dog.](#act4f-pat-bb) `Game.OVERRIDE_CHOICE_SPEAKER = "h"; publish("act4", ["hong_closer", 2]);`
+[سگِ خوب.](#act4f-pat-bb) `Game.OVERRIDE_CHOICE_SPEAKER = "h"; publish("act4", ["hong_closer", 2]);`
 
 `Game.OVERRIDE_CHOICE_SPEAKER = "b"`
 
-[Good human.](#act4f-pat-hong) `Game.OVERRIDE_CHOICE_SPEAKER = "b"; publish("act4", ["bb_closer", 8]);`
+[آدمِ خوب.](#act4f-pat-hong) `Game.OVERRIDE_CHOICE_SPEAKER = "b"; publish("act4", ["bb_closer", 8]);`
 
 # act4f-pat-hong
 
@@ -1971,15 +1967,15 @@ publish("act4", ["hong_closer", 5]);
 ```
 
 {{if _.fifteencigs}}
-b: AAAAA YOU'RE STILL EATING ALONE FIFTEEN CIGARETTES AAAAA
+b: آآآ تو هنوز داری تنها می‌خوری پونزده نخ سیگار آآآ
 {{/if}}
 
 {{if _.parasite}}
-b: AAAAA YOU'RE STILL NOT PRODUCTIVE WHILE EATING WE'RE SOCIETY-PARASITES AAAAA
+b: آآآ تو هنوز موقع غذا خوردن کاری پیش نمی‌بری ما انگلِ جامعه‌ایم آآآ
 {{/if}}
 
 {{if _.whitebread}}
-b: AAAAA YOU'RE EATING MORE WHITE BREAD AAAAA
+b: آآآ تو داری نونِ سفیدِ بیشتری می‌خوری آآآ
 {{/if}}
 
 ```
@@ -1992,6 +1988,6 @@ Game.FORCE_TEXT_DURATION = 90;
 Game.FORCE_NO_VOICE = true;
 ```
 
-b: YAP YAP YAP YAP YAP
+b: واق واق واق واق واق
 
 (#credits)

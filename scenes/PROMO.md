@@ -6,7 +6,7 @@
 
 (...51)
 
-[PLAY!](#intro-start) `publish("intro-to-game-1"); Game.OVERRIDE_CHOICE_LINE=true;`
+[بازی!](#intro-start) `publish("intro-to-game-1"); Game.OVERRIDE_CHOICE_LINE=true;`
 
 # intro-start
 
@@ -14,13 +14,13 @@
 
 `clearText()`
 
-n3: So before we start, how would *you* like to read?
+n3: قبل از اینکه شروع کنیم، بگو *دوست داری* چطور بخونی؟
 
 `publish("show_options_bottom")`
 
 # intro-start-2
 
-n3: Now, let's begin our story...
+n3: حالا بریم سراغ داستانمون...
 
 ```
 publish("hide_tabs");
@@ -31,7 +31,7 @@ clearText();
 
 `publish("intro-to-game-2")`
 
-n2: THIS IS A HUMAN
+n2: این یه آدمه
 
 (...600)
 
@@ -51,9 +51,9 @@ music('battle', {volume:0.5});
 
 (...300)
 
-n: AND THIS IS THE HUMAN'S ANXIETY
+n: و این هم اضطرابِ این آدمه
 
-n: _YOU_ ARE THE ANXIETY
+n: _تو_ هستی که نقش اضطراب رو بازی می‌کنی
 
 (#act1_normal)
 
@@ -66,45 +66,45 @@ sfx("rustle");
 Game.OVERRIDE_TEXT_SPEED = 1.5;
 ```
 
-h: Nope. No, nope, not listening. Gonna check my phone.
+h: نه. نه، نه، گوش نمی‌دم. دارم گوشیمو چک می‌کنم.
 
 ```
 sfx("rustle2");
 hong({body:"phone1", mouth:"neutral", eyes:"neutral"})
 ```
 
-n: YOUR JOB IS TO PROTECT YOUR HUMAN FROM *DANGER*
+n: وظیفه‌ات اینه که از آدمت در برابر *خطر* محافظت کنی
 
 `bb({eyes:"look", mouth:"small_lock", body:"fear"})`
 
-b: Gasp! You're scrolling your life away on Twitter! Again!
+b: وای! داری بازم عمرتو تو توییتر هدر می‌دی!
 
 ```
 bb({eyes:"normal", mouth:"normal", body:"normal"});
 hong({eyes:"annoyed"});
 ```
 
-h: Yeah I wonder why I don't just sit and listen to my thoughts more often.
+h: آره، چه عجب که نمی‌شینم بیشتر به افکارم گوش بدم.
 
 `hong({eyes:"neutral"});`
 
-n: QUICK, WARN THEM ABOUT A *DANGER!*
+n: زود باش، بهش درباره‌ی یه *خطر* هشدار بده!
 
 ```
 bb({eyes:"look"});
 ```
 
-[Oh no, look at that horrible news story!](#act1d_news)
+[اوه نه، ببین چه خبر وحشتناکی!](#act1d_news)
 
-[Oh no, is that tweet secretly about *us?*](#act1d_subtweet)
+[اوه نه، این توییت داره مخفیانه درباره‌ی *ما* حرف می‌زنه؟](#act1d_subtweet)
 
-[Hey, a GIF of a cat drinking milk](#act1d_milk)
+[هی، یه گیف از یه گربه که شیر می‌خوره](#act1d_milk)
 
 # act1d_milk
 
 `hong({mouth:"smile", eyes:"surprise"});`
 
-h: Heh ya that's cute, I--
+h: هه، آره نازه، من--
 
 ```
 hong({mouth:"shock", eyes:"shock"});
@@ -112,7 +112,7 @@ bb({body:"scream"});
 Game.OVERRIDE_TEXT_SPEED = 1.8;
 ```
 
-b: CATS CAN'T DIGEST MILK AND WE'RE TERRIBLE PEOPLE FOR ENJOYING ANIMAL ABUSE
+b: گربه‌ها نمی‌تونن شیر رو هضم کنن و ما آدمای افتضاحی هستیم که از شکار حیوانات لذت می‌بریم
 
 (...200)
 
@@ -121,6 +121,3 @@ bb({body:"normal", mouth:"normal", eyes:"fear"});
 attack("20p", "bad");
 publish("hp_show");
 ```
-
-
-

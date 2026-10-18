@@ -469,15 +469,61 @@ Game.executeText = function(line){
 			dialogue = dialogue.replace(/\^/g, "");
 		}
 
-		// Add the text
-		var interval = 0;
-		var SPEED = Math.round(Game.TEXT_SPEED / Game.OVERRIDE_TEXT_SPEED);
-		if(Game.FORCE_TEXT_DURATION>0){
-			SPEED = Math.round(Game.FORCE_TEXT_DURATION/dialogue.length);
-		}
+			// Add the text
+			var interval = 0;
+			var SPEED = Math.round(Game.TEXT_SPEED / Game.OVERRIDE_TEXT_SPEED);
+			if(Game.FORCE_TEXT_DURATION>0){
+				SPEED = Math.round(Game.FORCE_TEXT_DURATION/dialogue.length);
+			}
 
-		// IF IT'S BEEBEE, HONG, or NARRATOR 3, or HUNTER, or AL or SHIRE
-		if(speaker=="b" || speaker=="h" || speaker=="h2" || speaker=="h3" || speaker=="n3" || speaker=="r" || speaker=="a" || speaker=="s"){
+			// HACK: For Persian (RTL), reveal word-by-word instead of char-by-char
+			var IS_PERSIAN = /[\u0600-\u06FF]/.test(dialogue);
+			var isCharacterSpeaker = (speaker=="b" || speaker=="h" || speaker=="h2" || speaker=="h3" || speaker=="n3" || speaker=="r" || speaker=="a" || speaker=="s");
+			var speakerToVoice = {
+				"h":"hong","h2":"hong","h3":"hong",
+				"b":"beebee",
+				"n3":"typewriter",
+				"r":"hunter",
+				"a":"al",
+				"s":"shire"
+			};
+			var voiceId = speakerToVoice[speaker] || null;
+
+			if(IS_PERSIAN && isCharacterSpeaker){
+
+				// For Persian: split by words, put each word in a span
+				var span;
+				var dialogueWords = dialogue.split(" ");
+				for(var i=0; i<dialogueWords.length; i++){
+					var word = dialogueWords[i];
+					// Handle italics with *word*
+					if(word.startsWith("*") && word.endsWith("*") && word.length>1){
+						word = "<i>"+word.slice(1,-1)+"</i>";
+					}
+					span = document.createElement("span");
+					span.innerHTML = word+" ";
+					span.style.opacity = 0;
+					div.appendChild(span);
+				}
+
+				// Reveal words one-by-one
+				for(var i=0; i<dialogueWords.length; i++){
+					(function(index, interval, word, speaker){
+						Game.setTimeout(function(){
+							div.children[index].style.opacity = 1;
+							if(voiceId && word!=" "){
+								voice(voiceId, {volume:0.3});
+							}
+						}, interval);
+					})(i, interval, dialogueWords[i], speaker);
+					interval += SPEED*6;
+					var chr = dialogueWords[i].slice(-1);
+					if(chr=="."||chr=="?"||chr=="!") interval += SPEED*10;
+					if(chr==","||chr==":") interval += SPEED*5;
+					if(dialogueWords[i].slice(-3)=="...") interval += SPEED*15;
+				}
+
+			} else if(isCharacterSpeaker){
 
 			// Put in the text, each character a DIFFERENT SPAN...
 			var span, chr;

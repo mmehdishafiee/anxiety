@@ -1,6 +1,14 @@
 ![](https://ncase.me/anxiety/sharing/banner.png)
 
-# [Play the interactive story here!](https://ncase.me/anxiety/)
+# ماجراهای اضطراب — نسخه‌ی فارسی
+
+ترجمه‌ی کاملِ فارسی (فارسی) از بازی «Adventures With Anxiety!» ساخته‌ی [Nicky Case](https://ncase.me).
+
+**[بازی کنید!](index.html)** — تمام دیالوگ‌ها، رابط کاربری و متن‌های تصویری به فارسی ترجمه شده‌اند.
+
+---
+
+*Below is the original README (in English).*
 
 ## Public Domain
 

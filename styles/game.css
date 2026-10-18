@@ -1,3 +1,22 @@
+@font-face {
+	font-family: 'Vazirmatn';
+	src: url(fonts/Vazirmatn-Regular.woff2) format('woff2');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Vazirmatn';
+	src: url(fonts/Vazirmatn-Bold.woff2) format('woff2');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Vazirmatn';
+	src: url(fonts/Vazirmatn-Light.woff2) format('woff2');
+	font-weight: 300;
+	font-style: normal;
+}
+
 * {
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -15,9 +34,10 @@ body {
 	margin:0;
 	background: #111;
 	font-size: 20px;
-	font-family: Helvetica, Arial, sans-serif;
-	font-weight: 100;
-	line-height: 1.3em;
+	font-family: 'Vazirmatn', Helvetica, Arial, sans-serif;
+	font-weight: 400;
+	line-height: 1.6em;
+	direction: rtl;
 }
 
 /******************************************************************************************************
@@ -672,7 +692,7 @@ DIALOGUEZ
 }
 .narrator-bubble-i {
 	overflow: hidden;
-	text-align: left;
+	text-align: right;
 	color: #000;
 	margin-bottom: 0;
     margin-top: 0;
@@ -680,7 +700,7 @@ DIALOGUEZ
     height: 65px;
 }
 .narrator-bubble-i img{
-	float:left;
+	float:right;
 	margin: 0 20px !important;
 	position: relative;
     top: -13px;
@@ -1000,10 +1020,10 @@ CORNER TEXT
 .corner-text{
 	width: 220px;
     color: #555;
-    font-family: Helvetica, Arial, sans-serif;
-    font-weight: 500;
+    font-family: 'Vazirmatn', Helvetica, Arial, sans-serif;
+    font-weight: 400;
     font-size: 14px;
-    line-height: 1.3em;
+    line-height: 1.5em;
     position: absolute;
 }
 .corner-text a{
@@ -1014,23 +1034,23 @@ CORNER TEXT
 }
 #topleft{
 	top:10px;
-	left:10px;
-	text-align: left;
+	right:10px;
+	text-align: right;
 }
 #bottomleft{
 	bottom:10px;
-	left:10px;
-	text-align: left;
+	right:10px;
+	text-align: right;
 }
 #topright{
 	top:10px;
-	right:10px;
-	text-align: right;
+	left:10px;
+	text-align: left;
 }
 #bottomright{
 	bottom:10px;
-	right:10px;
-	text-align: right;
+	left:10px;
+	text-align: left;
 }
 .no_deco{
 	text-decoration: none;
